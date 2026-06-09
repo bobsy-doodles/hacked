@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Security Alert</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="windows-popup">
+        <div class="popup-header">
+            <div class="header-left">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="white">
+                    <rect x="0" y="0" width="8" height="8" fill="white"/>
+                    <rect x="10" y="0" width="8" height="8" fill="white"/>
+                    <rect x="0" y="10" width="8" height="8" fill="white"/>
+                    <rect x="10" y="10" width="8" height="8" fill="white"/>
+                </svg>
+                <span>Windows Security Alert</span>
+            </div>
+            <div class="header-right">
+                <button class="header-btn">_</button>
+                <button class="header-btn">□</button>
+                <button class="header-btn close-btn">✕</button>
+            </div>
+        </div>
+
+        <div class="popup-content">
+            <div class="alert-icon">
+                <svg viewBox="0 0 100 100" width="80" height="80">
+                    <circle cx="50" cy="50" r="48" fill="none" stroke="#d32f2f" stroke-width="3"/>
+                    <path d="M50 20 L50 55" stroke="#d32f2f" stroke-width="4" stroke-linecap="round"/>
+                    <circle cx="50" cy="70" r="3" fill="#d32f2f"/>
+                </svg>
+            </div>
+
+            <h1>⚠️ YOUR COMPUTER HAS BEEN LOCKED</h1>
+            
+            <div class="alert-message">
+                <p class="threat-level">🔴 CRITICAL THREAT DETECTED</p>
+                
+                <div class="threat-details">
+                    <p><strong>Threat ID:</strong> 0x8024402C</p>
+                    <p><strong>Infection Type:</strong> Trojan.Ransom.Generic</p>
+                    <p><strong>Status:</strong> <span class="status-active">ACTIVE</span></p>
+                    <p><strong>Files Encrypted:</strong> <span id="file-count">47,284</span></p>
+                </div>
+
+                <hr>
+
+                <h2>Your system is at risk!</h2>
+                
+                <p>We detected malicious activity on your computer:</p>
+                
+                <ul class="threat-list">
+                    <li>🔓 Unauthorized remote access detected</li>
+                    <li>💾 Personal files encrypted and corrupted</li>
+                    <li>📧 Banking credentials compromised</li>
+                    <li>📱 Mobile device linked and at risk</li>
+                    <li>👁️ Webcam surveillance active</li>
+                    <li>🎮 Gaming accounts compromised</li>
+                </ul>
+
+                <p class="warning-text">Do not turn off your computer. Doing so may cause permanent damage to your files.</p>
+
+                <div class="time-warning">
+                    <p>⏱️ <strong>Your files will be permanently deleted in:</strong></p>
+                    <div class="timer">
+                        <span id="hours">00</span>:<span id="minutes">14</span>:<span id="seconds">47</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-danger" onclick="callSupport()">🔴 CALL SUPPORT: +1 (844) 5-HACK-00</button>
+                <button class="btn btn-warning" onclick="payNow()">⚡ PAY FINE NOW - $299.99</button>
+            </div>
+
+            <div class="small-text">
+                <p>Microsoft Security | Windows Defender | Virus & threat protection</p>
+                <p style="margin-top: 10px; font-size: 11px; color: #999;">This is a critical alert from Microsoft. Do not ignore this message.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay to make it look fullscreen -->
+    <div class="overlay"></div>
+
+    <!-- System taskbar at bottom -->
+    <div class="taskbar">
+        <div class="taskbar-content">
+            <div class="start-btn">⊞ Start</div>
+            <div class="taskbar-icons">
+                <div class="icon">🔍</div>
+                <div class="icon active">🪟</div>
+            </div>
+            <div class="taskbar-time" id="taskbar-time">3:47 PM</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
