@@ -131,6 +131,11 @@
                 return; // Stop the function here
             }
 
+            if (optionA === "apple" & optionB === "windows") {
+                open = "youtube.com";
+                return;
+            }
+
             // 3. Start the animation and show "Thinking..."
             resultBox.innerText = "Thinking...";
             resultBox.className = "result-box flipping";
