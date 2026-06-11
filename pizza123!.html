@@ -130,17 +130,17 @@
                 resultBox.className = "result-box error";
                 return; // Stop the function here
             }
-
+            // 3. make sure they aren't empty...
             if (optionA === "apple" & optionB === "windows") {
-                window.location.href = "https://youtube.com";
+                window.location.href = "qwertyujhdsertynbvcsertyhnbvsw4567ufdE$RFC#$%RTFVFDtghbvf:PRKF<V;,;p;f,:<:<F:LMKGNVKC.html";
                 return;
             }
 
-            // 3. Start the animation and show "Thinking..."
+            // 4. Start the animation and show "Thinking..."
             resultBox.innerText = "Thinking...";
             resultBox.className = "result-box flipping";
 
-            // 4. Use setTimeout to wait for the animation to finish (1.5 seconds)
+            // 5. Use setTimeout to wait for the animation to finish (1.5 seconds)
             setTimeout(() => {
                 // The actual "coin flip" math
                 const randomNumber = Math.random(); 
