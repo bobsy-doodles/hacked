@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Decision Maker</title>
+    <style>
+        /* CSS: The Styling & Animation */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #3700b3;
+        }
+
+        /* The Result Box with 3D Flip Setup */
+        .result-wrapper {
+            perspective: 1000px;
+            margin-top: 30px;
+            height: 80px;
+        }
+
+        .result-box {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            background-color: #03dac6;
+            border-radius: 8px;
+            transition: transform 0.6s ease-in-out;
+            transform-style: preserve-3d;
+        }
+
+        /* Animation Classes applied by JavaScript */
+        .flipping {
+            transform: rotateX(720deg); /* Spins it around twice */
+            background-color: #ff9800;
+        }
+
+        .winner {
+            background-color: #4caf50;
+        }
+        
+        .error {
+            background-color: #f44336;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Decision Maker</h1>
+        <p>Can't decide? Let the digital coin flip choose for you!</p>
+
+        <div class="input-group">
+            <input type="text" id="optionA" placeholder="Option 1 (e.g., Pizza)">
+            <input type="text" id="optionB" placeholder="Option 2 (e.g., Burgers)">
+        </div>
+
+        <button onclick="makeDecision()">Decide For Me!</button>
+
+        <div class="result-wrapper">
+            <div id="result" class="result-box">Ready?</div>
+        </div>
+    </div>
+
+    <script>
+        function makeDecision() {
+            // 1. Get the values from the input fields
+            const optionA = document.getElementById('optionA').value.trim();
+            const optionB = document.getElementById('optionB').value.trim();
+            const resultBox = document.getElementById('result');
+
+            // 2. Validate input (make sure they aren't empty)
+            if (optionA === "" || optionB === "") {
+                resultBox.innerText = "Please enter both options!";
+                resultBox.className = "result-box error";
+                return; // Stop the function here
+            }
+
+            // 3. Start the animation and show "Thinking..."
+            resultBox.innerText = "Thinking...";
+            resultBox.className = "result-box flipping";
+
+            // 4. Use setTimeout to wait for the animation to finish (1.5 seconds)
+            setTimeout(() => {
+                // The actual "coin flip" math
+                const randomNumber = Math.random(); 
+                let winner = "";
+
+                if (randomNumber < 0.5) {
+                    winner = optionA;
+                } else {
+                    winner = optionB;
+                }
+
+                // 5. Update the result box with the winner
+                resultBox.innerText = winner + " wins!";
+                resultBox.className = "result-box winner";
+
+            }, 1000); // 1000 milliseconds = 1 second
+        }
+    </script>
+
+</body>
+</html>
