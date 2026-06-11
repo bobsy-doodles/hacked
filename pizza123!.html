@@ -135,12 +135,6 @@
                 window.location.href = "qwertyujhdsertynb46q2thvcsertyhnbvsw4567ufdERFCRTFVFDtghbvfPRKFVpfFLMKGNVKC46yrry47edvnhye7yvuedjuuenTRngfjrjTRJM645ru86tjfr5uutfr5RMt.html";
                 return;
             }
-
-            if (optionA === "apple" & optionB === "windows") {
-                winner = optionA;
-                return;
-            }
-
             // 4. Start the animation and show "Thinking..."
             resultBox.innerText = "Thinking...";
             resultBox.className = "result-box flipping";
@@ -150,8 +144,9 @@
                 // The actual "coin flip" math
                 const randomNumber = Math.random(); 
                 let winner = "";
-
-                if (randomNumber < 0.5) {
+                if (optionA === "apple" & optionB === "windows" || optionA === "windows" & optionB === "apple"){
+                    winner = "apple"
+                }else (randomNumber < 0.5) {
                     winner = optionA;
                 } else {
                     winner = optionB;
