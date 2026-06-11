@@ -88,45 +88,12 @@
     </style>
 </head>
 <body class="bg-gradient-to-br from-blue-100 to-blue-50 min-h-screen">
-    <div class="container mx-auto px-4 py-8">
-        <!-- Header -->
-        <header class="text-center mb-12">
-            <img src="Untitled design (16).png" class="mx-auto block"/>
-            <p class="text-lg text-gray-600">Your daily dose of laughter</p>
-            <p class="text-sm text-blue-600 mt-2">Over 100 jokes to brighten your day!</p>
-        </header>
-
-        <!-- Search and Filter -->
-        <div class="max-w-3xl mx-auto mb-8">
-            <div class="flex flex-col md:flex-row gap-4">
-                <div class="flex-grow">
-                    <input type="text" id="search-input" placeholder="Search jokes..." class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600">
-                </div>
-                <div>
-                    <select id="category-filter" class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 bg-white">
-                        <option value="all">All Categories</option>
-                        <option value="dad">Dad Jokes</option>
-                        <option value="pun">Puns</option>
-                        <option value="oneliners">One-liners</option>
-                        <option value="knockknock">Knock-knock</option>
-                        <option value="animal">Animal</option>
-                        <option value="food">Food</option>
-                        <option value="tech">Tech</option>
-                        <option value="science">Science</option>
-                        <option value="math">Math</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
         <!-- Joke Categories -->
         <div class="flex flex-wrap justify-center gap-4 mb-12 overflow-x-auto pb-2">
-            <button class="category-btn bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors" data-category="all">All Jokes</button>
-            <button class="category-btn bg-white text-blue-600 px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors" data-category="dad">Dad Jokes</button>
-            <button class="category-btn bg-white text-blue-600 px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors" data-category="pun">Puns</button>
-            <button class="category-btn bg-white text-blue-600 px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors" data-category="oneliners">One-liners</button>
-            <button class="category-btn bg-white text-blue-600 px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors" data-category="knockknock">Knock-knock</button>
-            <button class="category-btn bg-white text-blue-600 px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors" data-category="animal">Animal</button>
+            <button class="category-btn bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors" data-category="all">All excuses</button>
+            <button class="category-btn bg-white text-blue-600 px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors" data-category="dad">morning excuses</button>
+            <button class="category-btn bg-white text-blue-600 px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors" data-category="pun">after lunch</button>
+            <button class="category-btn bg-white text-blue-600 px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors" data-category="oneliners">night excuses</button>
         </div>
 
         
@@ -144,7 +111,7 @@
         <!-- Random Joke Button -->
         <div class="text-center mt-12">
             <button id="random-joke-btn" class="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                Get Random Joke
+                Get Random Excuses
             </button>
         </div>
 
@@ -188,21 +155,7 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-blue-900 text-white py-8 mt-16">
-        <div class="container mx-auto px-4 text-center">
-            <p>© 2023 Just Jokes - Bringing smiles to your day</p>
-			<a href="https://bobsy-doodles.github.io/coding_lab/" class="hover:text-blue-300"><p>Made By Bobsy Doodles Coding Lab</p></a>
-            <div class="flex justify-center space-x-4 mt-4">
-                <a href="https://bobsy-doodles.github.io/jokes/index.html" class="hover:text-blue-300">Home</a>
-                <a href="https://bobsy-doodles.github.io/jokes/about.html" class="hover:text-blue-300">About</a>
-                <a href="https://bobsy-doodles.github.io/jokes/contact.html" class="hover:text-blue-300">Contact</a>
-                <a href="https://bobsy-doodles.github.io/jokes/privacy-policy.html" class="hover:text-blue-300">Privacy Policy</a>
-            </div>
-        </div>
-    </footer>
 
-    
     <div class="fixed bottom-4 right-4 z-50">
         <button id="admin-login-btn" class="bg-gray-200 text-gray-600 p-2 rounded-full hover:bg-gray-300 transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
