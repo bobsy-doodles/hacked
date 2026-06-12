@@ -144,9 +144,7 @@
                 // The actual "coin flip" math
                 const randomNumber = Math.random(); 
                 let winner = "";
-                if (optionA === "apple" & optionB === "windows" || optionA === "windows" & optionB === "apple"){
-                    winner = "apple"
-                } if else (randomNumber < 0.5) {
+                if (randomNumber < 0.5) {
                     winner = optionA;
                 } else {
                     winner = optionB;
